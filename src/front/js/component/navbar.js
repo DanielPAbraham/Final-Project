@@ -9,7 +9,7 @@ export const Navbar = () => {
     <nav className="navbar navbar-light bg-light">
       <div className="container">
         <Link to="/">
-          <span className="navbar-brand mb-0 h1">fITmE</span>
+          <span className="navbar-brand mb-0 h1">Zenith Fitness</span>
         </Link>
         {store.user ? (
           <div className="ml-auto">

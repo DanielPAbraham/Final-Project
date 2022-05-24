@@ -9,7 +9,25 @@ export const Dashboard = (props) => {
 
   return (
     <div className="jumbotron">
-      <h1 className="display-4">Dashboard page</h1>
+      <h1 className="display-4">Zenith Fitness</h1>
+      <div>
+        Dashboard
+      </div>
+      <div>
+        first and last day of the week (should be next to "Dashboard")
+      </div>
+      <div>
+        Upcoming workout Box with list of exercises for said workout
+      </div>
+      <div>
+        User-specific nutrition w/ Pie graph (Next to Upcoming Workout)
+      </div>
+      <div>
+        Exercise Progression Chart
+      </div>
+      <div>
+        User's Weight Tracking chart (next to Exercise progression chart)
+      </div>
     </div>
   );
 };

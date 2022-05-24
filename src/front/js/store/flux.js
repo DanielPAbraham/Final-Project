@@ -7,8 +7,23 @@ const getState = ({ getStore, getActions, setStore }) => {
     },
     actions: {
       // Use getActions to call a function within a fuction
-      exampleFunction: () => {
-        getActions().changeColor(0, "green");
+      getData: (entity) => {
+        fetch(`https://wger.de/api/v2/${entity}/`)
+          .then((response) => {
+            if (!response.ok) {
+              throw Error(response.statusText);
+            }
+            // Read the response as json.
+            return response.json();
+          })
+          .then((responseAsJson) => {
+            // Do stuff with the JSONified response
+            console.log(responseAsJson.results);
+            setStore({ [entity]: responseAsJson.results });
+          })
+          .catch((error) => {
+            console.log("Looks like there was a problem: \n", error);
+          });
       },
 
       login: (user) => {
