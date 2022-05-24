@@ -3,17 +3,10 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Dashboard = (props) => {
+export const Profile = (props) => {
   const { store, actions } = useContext(Context);
   const params = useParams();
 
-  Dashboard.propTypes = {
+  Profile.propTypes = {
     match: PropTypes.object,
   };
-
-  return (
-    <div>
-      <h1>This is the Dashboard</h1>
-    </div>
-  );
-};
