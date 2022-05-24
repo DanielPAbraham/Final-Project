@@ -26,6 +26,17 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
       },
 
+      getPrivateData:async() => {
+        const options = {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Token "+"3d83a826be68c11ea58b24001f1f46c5fc2c7223"
+          }
+        }
+        const reponse = await fetch ("https://wger.de/api/v2/meal") 
+      },
+    
       login: (user) => {
         setStore({ user: user });
         return true;

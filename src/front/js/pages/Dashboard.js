@@ -11,11 +11,17 @@ export const Dashboard = (props) => {
     match: PropTypes.object,
   };
 
+  useEffect(() => {
+    actions.getPrivateData().then((payload) => {
+      console.log(payload)
+    })
+  }, [])
+
   return (
     <div className="jumbotron">
       <h1 className="display-4">Zenith Fitness</h1>
       <div>
-        Dashboard
+
       </div>
     </div>
   );
