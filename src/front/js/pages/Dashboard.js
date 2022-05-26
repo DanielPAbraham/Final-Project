@@ -21,7 +21,7 @@ export const Dashboard = (props) => {
     <div className="jumbotron">
       <h1 className="display-4">Zenith Fitness</h1>
       <div>
-
+        <button>Click ME!</button>
       </div>
     </div>
   );

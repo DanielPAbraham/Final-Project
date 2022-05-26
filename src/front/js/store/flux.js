@@ -26,7 +26,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
       },
 
-      getPrivateData:async() => {
+      getPrivateData:() => {
         const options = {
           method: "GET",
           headers: {
@@ -34,7 +34,22 @@ const getState = ({ getStore, getActions, setStore }) => {
             Authorization: "Token "+"3d83a826be68c11ea58b24001f1f46c5fc2c7223"
           }
         }
-        const reponse = await fetch ("https://wger.de/api/v2/meal") 
+        fetch ("https://wger.de/api/v2/meal", options)
+        .then((response) => {
+          if (!response.ok) {
+            throw Error(response.statusText);
+          }
+          // Read the response as json.
+          return response.json();
+        })
+        .then((responseAsJson) => {
+          // Do stuff with the JSONified response
+          console.log(responseAsJson.results);
+          setStore({ [entity]: responseAsJson.results });
+        })
+        .catch((error) => {
+          console.log("Looks like there was a problem: \n", error);
+        }); 
       },
     
       login: (user) => {
