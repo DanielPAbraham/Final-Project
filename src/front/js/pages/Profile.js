@@ -34,12 +34,12 @@ export const Profile = (props) => {
           </ul>
         </div>
 
-        <div class="col-4 border border-danger bg-light">
+        <div class=" col-4 border border-danger bg-light">
           <br></br>
           <p class="fs-2">About me:</p>
           <div class="form-floating ">
             <textarea
-              class="form-control"
+              class="form-control aboutme"
               placeholder="Leave a comment here"
               id="floatingTextarea2"
             ></textarea>
