@@ -2,6 +2,13 @@
     General Styles used on every website (Don't Repeat Yourself)
 */
 
+textarea {
+  resize: none;
+}
+.aboutme {
+  height: 250px !important;
+}
+
 html {
   background-color: #56baed;
 }

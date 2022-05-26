@@ -8,7 +8,6 @@ import { Single } from "./pages/single";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import { Dashboard } from "./pages/Dashboard";
-import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
 import injectContext from "./store/appContext";
@@ -27,7 +26,6 @@ const Layout = () => {
     <div>
       <BrowserRouter basename={basename}>
         <ScrollToTop>
-          <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
