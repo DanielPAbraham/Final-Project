@@ -12,29 +12,23 @@ export const Dashboard = (props) => {
     match: PropTypes.object,
   };
 
-  useEffect(() => {
-    actions.getPrivateData().then((payload) => {
-      console.log(payload);
-    });
-  }, []);
-
   return (
     <>
       <Usernav />
-      <div class="bg2">
-        <div class="container">
-          <div class="row gx-5">
-            <div class="col border border-danger bg-light">Dashboard</div>
-            <div class="col-1"></div>
-            <div class="col border border-danger bg-light">Date/Week</div>
-            <div class="col-8"></div>
+      <div className="bg2">
+        <div className="container">
+          <div className="row gx-5">
+            <div className="col border border-danger bg-light">Dashboard</div>
+            <div className="col-1"></div>
+            <div className="col border border-danger bg-light">Date/Week</div>
+            <div className="col-8"></div>
           </div>
         </div>
         <br></br>
         <br></br>
-        <div class="container">
-          <div class="row gx-5">
-            <div class="col-4 border border-danger bg-light">
+        <div className="container">
+          <div className="row gx-5">
+            <div className="col-4 border border-danger bg-light">
               Up Coming: Workout A<br></br>
               <br></br>
               Squat: 3x5 205
@@ -45,8 +39,8 @@ export const Dashboard = (props) => {
               <br></br>
               Accessory of Choice YxZ XYZ
             </div>
-            <div class="col-1"></div>
-            <div class="col-4 border border-danger bg-light">
+            <div className="col-1"></div>
+            <div className="col-4 border border-danger bg-light">
               Nutrition
               <br></br>
               <ul>
@@ -61,34 +55,34 @@ export const Dashboard = (props) => {
                 </li>
               </ul>
             </div>
-            <div class="col-2 border border-danger bg-light">
+            <div className="col-2 border border-danger bg-light">
               <img
                 src="https://cdn.icon-icons.com/icons2/1339/PNG/512/letterx_87521.png"
-                class="img-fluid"
+                className="img-fluid"
               ></img>
             </div>
           </div>
         </div>
         <br></br>
         <br></br>
-        <div class="container">
-          <div class="row gx-5">
-            <div class="col-7 border border-danger bg-light">
+        <div className="container">
+          <div className="row gx-5">
+            <div className="col-7 border border-danger bg-light">
               <br></br>
-              <div class="container">
-                <div class="row">
-                  <div class="col">Progression</div>
-                  <div class="col-3"></div>
-                  <div class="col border">Squat</div>
-                  <div class="col border">Bench</div>
-                  <div class="col border">Deadlift</div>
-                  <div class="col border">Chin Ups</div>
+              <div className="container">
+                <div className="row">
+                  <div className="col">Progression</div>
+                  <div className="col-3"></div>
+                  <div className="col border">Squat</div>
+                  <div className="col border">Bench</div>
+                  <div className="col border">Deadlift</div>
+                  <div className="col border">Chin Ups</div>
                 </div>
               </div>
-              <div class="col-7 border border-danger bg-light"> </div>
+              <div className="col-7 border border-danger bg-light"> </div>
             </div>
-            <div class="col-1"></div>
-            <div class="col-4 border border-danger bg-light">
+            <div className="col-1"></div>
+            <div className="col-4 border border-danger bg-light">
               Weight Tracking
               <br></br>
               <ul>

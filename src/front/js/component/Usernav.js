@@ -8,9 +8,9 @@ export const Usernav = () => {
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container">
-        <div class="dropdown col-3">
+        <div className="dropdown col-3">
           <button
-            class="btn btn-secondary dropdown-toggle"
+            className="btn btn-secondary dropdown-toggle"
             type="button"
             id="dropdownMenu2"
             data-bs-toggle="dropdown"
@@ -18,30 +18,31 @@ export const Usernav = () => {
           >
             Nav
           </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <li>
-              <Link to="/about">
-                <button class="dropdown-item">About Us</button>
-              </Link>
-            </li>
+          <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+            
             <li>
               <Link to="/Dashboard">
-                <button class="dropdown-item">Dashboard</button>
+                <button className="dropdown-item">Dashboard</button>
               </Link>
             </li>
             <li>
               <Link to="/Profile">
-                <button class="dropdown-item">My Profile</button>
+                <button className="dropdown-item">My Profile</button>
               </Link>
             </li>
             <li>
               <Link to="/Nutrition">
-                <button class="dropdown-item">My Nutrition</button>
+                <button className="dropdown-item">My Nutrition</button>
               </Link>
             </li>
             <li>
               <Link to="/Recipes">
-                <button class="dropdown-item">My Recipies</button>
+                <button className="dropdown-item">My Recipies</button>
+              </Link>
+            </li>
+            <li>
+              <Link to="/about">
+                <button className="dropdown-item">About Us</button>
               </Link>
             </li>
           </ul>
@@ -51,7 +52,7 @@ export const Usernav = () => {
             Zenith Fitness
           </span>
         </Link>
-        <div class="col-3"></div>
+        <div className="col-3"></div>
       </div>
     </nav>
   );

@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container">
-        <div class="col-3"></div>
+        <div className="col-3"></div>
         <Link to="/">
           <span className="navbar-brand mb-0 h1 justify-content-center fs-3">
             Zenith Fitness
