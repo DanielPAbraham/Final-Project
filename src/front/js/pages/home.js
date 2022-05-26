@@ -1,15 +1,17 @@
 import React, { useContext } from "react";
+import { Navbar } from "../component/navbar";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
 
 export const Home = () => {
-	const { store, actions } = useContext(Context);
+  const { store, actions } = useContext(Context);
 
-	return (
-		<div className="text-center mt-5">
-			<div className="">
-				Stuff is working
-			</div>
-		</div>
-	);
+  return (
+    <>
+      <Navbar />
+      <div className="bg1 fullscreen h-100 text-center mt-5 end-0">
+        <div className="">Stuff is working</div>
+      </div>
+    </>
+  );
 };
