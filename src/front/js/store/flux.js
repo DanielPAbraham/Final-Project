@@ -7,34 +7,16 @@ const getState = ({ getStore, getActions, setStore }) => {
     },
     actions: {
       // Use getActions to call a function within a fuction
-      getData: (entity) => {
-        fetch(`https://wger.de/api/v2/${entity}/`)
-          .then((response) => {
-            if (!response.ok) {
-              throw Error(response.statusText);
-            }
-            // Read the response as json.
-            return response.json();
-          })
-          .then((responseAsJson) => {
-            // Do stuff with the JSONified response
-            console.log(responseAsJson.results);
-            setStore({ [entity]: responseAsJson.results });
-          })
-          .catch((error) => {
-            console.log("Looks like there was a problem: \n", error);
-          });
-      },
-
-      getPrivateData:() => {
+      
+      getRecipeData:() => {
         const options = {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            Authorization: "Token "+"3d83a826be68c11ea58b24001f1f46c5fc2c7223"
+            Authorization: "e23e7c5a9ff34fee9bfc874ea36bb9c1"
           }
         }
-        fetch ("https://wger.de/api/v2/meal", options)
+        fetch ("https://api.spoonacular.com/recipe/", options)
         .then((response) => {
           if (!response.ok) {
             throw Error(response.statusText);
