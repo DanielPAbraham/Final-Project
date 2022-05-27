@@ -16,6 +16,13 @@ export const Dashboard = (props) => {
     <>
       <Usernav />
       <div className="bg2">
+        <div className="text-center">
+          <Link to="/myjourney">
+            <button className="btn btn-large btn-warning my-5">
+              Your Journey
+            </button>
+          </Link>
+        </div>
         <div className="container">
           <div className="row gx-5">
             <div className="col border border-danger bg-light">Dashboard</div>
