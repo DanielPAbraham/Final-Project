@@ -10,7 +10,6 @@ export const Home = () => {
     <>
       <Navbar />
       <div className="bg1 fullscreen h-100 text-center mt-5 end-0">
-        <div className="">Stuff is working</div>
       </div>
     </>
   );
