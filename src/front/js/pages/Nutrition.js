@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Usernav } from "../component/Usernav";
+import { recipe } from "../component/recipeCard";
 
 export const Nutrition = (props) => {
   const { store, actions } = useContext(Context);
@@ -11,23 +12,27 @@ export const Nutrition = (props) => {
   return (
     <>
       <Usernav />
-      <div class="bg2">
-        <div class="container ">
-          <div class="row gx-5">
-            <div class="col border border-danger bg-light">Dashboard</div>
-            <div class="col-1"></div>
-            <div class="col border border-danger bg-light">Date/Week</div>
-            <div class="col-8"></div>
+      <div className="bg2">
+        <div className="container ">
+          <div className="row gx-5">
+            <div className="col border border-danger bg-light">Dashboard</div>
+            <div className="col-1"></div>
+            <div className="col border border-danger bg-light">Date/Week</div>
+            <div className="col-8"></div>
           </div>
         </div>
         <br></br>
-        <div class="container">
+        <div className="container">
           <h1>User XYZ's Nutrition Protocol</h1>
         </div>
+        <div>
+        <section>
+      </section>
+        </div>
         <br></br>
-        <div class="container">
-          <div class="row gx-5">
-            <div class="col-4 border border-danger bg-light">
+        <div className="container">
+          <div className="row gx-5">
+            <div className="col-4 border border-danger bg-light">
               <br></br>
               <ul>
                 <li>
@@ -46,13 +51,13 @@ export const Nutrition = (props) => {
                 </li>
               </ul>
             </div>
-            <div class="col-2 border border-danger bg-light">
+            <div className="col-2 border border-danger bg-light">
               <img
                 src="https://cdn.icon-icons.com/icons2/1339/PNG/512/letterx_87521.png"
-                class="img-fluid position-relative top-50 start-50 translate-middle"
+                className="img-fluid position-relative top-50 start-50 translate-middle"
               ></img>
             </div>
-            <div class="col-2 border border-danger bg-light">
+            <div className="col-2 border border-danger bg-light">
               <br></br>
               <ul>
                 <li>
@@ -65,11 +70,11 @@ export const Nutrition = (props) => {
             </div>
           </div>
           <br></br>
-          <div class="col-4 border border-danger bg-light">
+          <div className="col-4 border border-danger bg-light">
             <p>Info for every Macro-Nutrient, examples, and common foods</p>
           </div>
           <br></br>
-          <div class="col-5 border border-danger bg-light">
+          <div className="col-5 border border-danger bg-light">
             <ul>
               <li>Etiam in eros dapibus, lacinia tellus nec, euismod mi.</li>
               <li>Vivamus congue nulla quis consectetur molestie.</li>
@@ -92,6 +97,6 @@ export const Nutrition = (props) => {
   );
 };
 
-Nutrition.propTypes = {
-  match: PropTypes.object,
-};
+// Nutrition.propTypes = {
+//   match: PropTypes.object,
+// };

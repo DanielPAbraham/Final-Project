@@ -13,15 +13,15 @@ export const About = (props) => {
       <Usernav />
       <div className>
         <br></br>
-        <div class="container">
-          <div class="row gx-5 fs-2">
-            <div class="col-2 border border-danger bg-light">About Us</div>
+        <div className="container">
+          <div className="row gx-5 fs-2">
+            <div className="col-2 border border-danger bg-light">About Us</div>
           </div>
         </div>
         <br></br>
-        <div class="container">
-          <div class="row gx-5">
-            <div class="col-12 border border-danger bg-light">
+        <div className="container">
+          <div className="row gx-5">
+            <div className="col-12 border border-danger bg-light">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
               suscipit libero, vitae pretium dolor. Fusce a porttitor ligula.
               Phasellus rutrum ex a ex fringilla ornare. Pellentesque habitant
@@ -39,7 +39,7 @@ export const About = (props) => {
             </div>
           </div>
           <br></br>
-          <div class="col-12 border border-danger bg-light">
+          <div className="col-12 border border-danger bg-light">
             <p>What we stand for</p>
             <ul>
               <li>Curabitur aliquam sapien vitae bibendum gravida.</li>

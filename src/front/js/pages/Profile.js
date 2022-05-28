@@ -11,19 +11,19 @@ export const Profile = (props) => {
   return (
     <>
       <Usernav />
-      <div class="container">
-        <div class="container">
+      <div className="container">
+        <div className="container">
           <h1>My Profile</h1>
         </div>
         <br></br>
-        <div class="row gx-5">
-          <div class="col-3 ">
+        <div className="row gx-5">
+          <div className="col-3 ">
             <img
               src="https://i1.sndcdn.com/avatars-1izkebM3cqeF0hcO-uo8bjQ-t500x500.jpg"
-              class="img-fluid rounded-circle position-relative top-50 start-50 translate-middle"
+              className="img-fluid rounded-circle position-relative top-50 start-50 translate-middle"
             ></img>
           </div>
-          <div class="col-4 border border-danger bg-light fs-3">
+          <div className="col-4 border border-danger bg-light fs-3">
             <br></br>
 
             <ul>
@@ -37,12 +37,12 @@ export const Profile = (props) => {
             </ul>
           </div>
 
-          <div class=" col-4 border border-danger bg-light">
+          <div className=" col-4 border border-danger bg-light">
             <br></br>
-            <p class="fs-2">About me:</p>
-            <div class="form-floating ">
+            <p className="fs-2">About me:</p>
+            <div className="form-floating ">
               <textarea
-                class="form-control aboutme"
+                className="form-control aboutme"
                 placeholder="Leave a comment here"
                 id="floatingTextarea2"
               ></textarea>

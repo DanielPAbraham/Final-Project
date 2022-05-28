@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Usernav } from "../component/Usernav";
+import { RecipeCard } from "../component/recipeCard";
 
-export const Recipes = (props) => {
+export const Recipes = (prop) => {
   const { store, actions } = useContext(Context);
   const params = useParams();
 
@@ -15,7 +16,7 @@ export const Recipes = (props) => {
         <div className="container">
           <br></br>
           <div className="row gx-5 fs-3">
-            <div className="col-2 border border-danger bg-light">Recipies</div>
+            <div className="col-2 border border-danger bg-light">Recipes</div>
             <div className="col-3"></div>
             <div className="col-3 border border-danger bg-light">
               Nutrition Goals
@@ -50,26 +51,7 @@ export const Recipes = (props) => {
             <div className="col-4 border border-danger bg-light">
               Nutrition
               <br></br>
-              <ul>
-                <li>
-                  Donec vel arcu dictum, fermentum ipsum sed, pellentesque dui
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Integer sed ligula id quam tristique fringilla ac eget risus.
-                </li>
-                <li>
-                  Donec vel arcu dictum, fermentum ipsum sed, pellentesque dui
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                  Integer sed ligula id quam tristique fringilla ac eget risus.
-                </li>
-              </ul>
+              
             </div>
             <div className="col-3 border border-danger bg-light">
               <img
@@ -98,6 +80,11 @@ export const Recipes = (props) => {
               </li>
             </ul>
           </div>
+          <div>
+                {store.complex.map((recipe, index) => {
+                  return <RecipeCard key={index} recipe={recipe} />;
+                })}
+              </div>
         </div>
       </div>
     </>

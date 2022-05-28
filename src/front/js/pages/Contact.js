@@ -7,5 +7,5 @@ export const Contact = (props) => {
   const { store, actions } = useContext(Context);
   const params = useParams();
 
-  return <div class="container"></div>;
+  return <div className="container"></div>;
 };
