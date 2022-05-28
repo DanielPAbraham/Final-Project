@@ -16,6 +16,7 @@ import { Recipes } from "./pages/Recipes";
 import { Profile } from "./pages/Profile";
 import { Contact } from "./pages/Contact";
 import { About } from "./pages/About";
+import { MyJourney } from "./pages/MyJourney";
 //create your first component
 const Layout = () => {
   //the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -31,6 +32,7 @@ const Layout = () => {
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/myjourney" component={MyJourney} />
             <Route exact path="/nutrition" component={Nutrition} />
             <Route exact path="/recipes" component={Recipes} />
             <Route exact path="/profile" component={Profile} />
