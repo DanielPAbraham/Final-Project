@@ -51,7 +51,6 @@ export const Recipes = (prop) => {
             <div className="col-4 border border-danger bg-light">
               Nutrition
               <br></br>
-              
             </div>
             <div className="col-3 border border-danger bg-light">
               <img
@@ -81,10 +80,10 @@ export const Recipes = (prop) => {
             </ul>
           </div>
           <div>
-                {store.complex.map((recipe, index) => {
-                  return <RecipeCard key={index} recipe={recipe} />;
-                })}
-              </div>
+            {store.complex.map((recipe, index) => {
+              return <RecipeCard key={index} recipe={recipe} />;
+            })}
+          </div>
         </div>
       </div>
     </>

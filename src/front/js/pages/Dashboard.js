@@ -12,19 +12,18 @@ export const Dashboard = (props) => {
     match: PropTypes.object,
   };
 
+  useEffect(() => {
+    actions.getPrivateData().then((payload) => {
+      console.log(payload);
+    });
+  }, []);
+
   return (
     <>
       <Usernav />
       <div className="bg2">
-        <div className="text-center">
-          <Link to="/myjourney">
-            <button className="btn btn-large btn-warning my-5">
-              Your Journey
-            </button>
-          </Link>
-        </div>
         <div className="container">
-          <div className="row gx-5">
+          <div clasName="row gx-5">
             <div className="col border border-danger bg-light">Dashboard</div>
             <div className="col-1"></div>
             <div className="col border border-danger bg-light">Date/Week</div>
