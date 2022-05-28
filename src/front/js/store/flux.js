@@ -1,39 +1,33 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
+      complex: [],
       message: null,
       user: "",
-      demo: [],
+      key: "?apiKey=e23e7c5a9ff34fee9bfc874ea36bb9c1",
     },
     actions: {
       // Use getActions to call a function within a fuction
-      
-      getRecipeData:() => {
-        const options = {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "e23e7c5a9ff34fee9bfc874ea36bb9c1"
-          }
-        }
-        fetch ("https://api.spoonacular.com/recipe/", options)
-        .then((response) => {
-          if (!response.ok) {
-            throw Error(response.statusText);
-          }
-          // Read the response as json.
-          return response.json();
-        })
-        .then((responseAsJson) => {
-          // Do stuff with the JSONified response
-          console.log(responseAsJson.results);
-          setStore({ [entity]: responseAsJson.results });
-        })
-        .catch((error) => {
-          console.log("Looks like there was a problem: \n", error);
-        }); 
+
+      getRecipeData: () => {
+        fetch(`https://api.spoonacular.com/recipes/complexSearch${getStore().key}`)
+          .then((response) =>
+            // if (!response.ok) {
+            //   throw Error(response.statusText);
+            // }
+            // Read the response as json.
+            response.json()
+          )
+          .then((responseAsJson) => {
+            // Do stuff with the JSONified response
+            setStore({ complex: responseAsJson.results });
+            console.log(getStore().complex);
+          })
+          .catch((error) => {
+            console.log("Looks like there was a problem: \n", error);
+          });
       },
-    
+
       login: (user) => {
         setStore({ user: user });
         return true;
