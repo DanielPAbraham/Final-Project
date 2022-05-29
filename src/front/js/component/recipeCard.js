@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
@@ -27,3 +28,5 @@ RecipeCard.propTypes = {
     title: PropTypes.string,
     image: PropTypes.string,
 };
+=======
+>>>>>>> 78df41ab5cc159ec2334a9326b11e7e3564ea3db
