@@ -12,14 +12,23 @@ const getState = ({ getStore, getActions, setStore }) => {
       getRecipeData: () => {
         fetch(`https://api.spoonacular.com/recipes/complexSearch${getStore().key}`)
           .then((response) =>
-            // if (!response.ok) {
-            //   throw Error(response.statusText);
-            // }
-            // Read the response as json.
             response.json()
           )
           .then((responseAsJson) => {
-            // Do stuff with the JSONified response
+            setStore({ complex: responseAsJson.results });
+            console.log(getStore().complex);
+          })
+          .catch((error) => {
+            console.log("Looks like there was a problem: \n", error);
+          });
+      },
+
+      getMealData: () => {
+        fetch(``)
+          .then((response) =>
+            response.json()
+          )
+          .then((responseAsJson) => {
             setStore({ complex: responseAsJson.results });
             console.log(getStore().complex);
           })
