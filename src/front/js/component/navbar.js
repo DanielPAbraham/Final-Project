@@ -6,11 +6,11 @@ export const Navbar = () => {
   const { store, actions } = React.useContext(Context);
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar  navcolor">
       <div className="container">
         <div className="col-3"></div>
         <Link to="/">
-          <span className="navbar-brand mb-0 h1 justify-content-center fs-3">
+          <span className="navbar-brand embold mb-0 h1 justify-content-center fs-3">
             Zenith Fitness
           </span>
         </Link>
