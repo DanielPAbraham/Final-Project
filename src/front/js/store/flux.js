@@ -1,6 +1,13 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
+      mealData: [],
+      vegetarian: [],
+      vegan: [],
+      keto: [],
+      glutenFree: [],
+      paleo: [],
+      pescaterian: [],
       complex: [],
       message: null,
       user: "",

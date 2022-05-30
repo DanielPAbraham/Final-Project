@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Usernav } from "../component/Usernav";
+import { Datetime } from "../component/Datetime"
 
 export const Dashboard = (props) => {
   const { store, actions } = useContext(Context);
@@ -12,18 +13,12 @@ export const Dashboard = (props) => {
     match: PropTypes.object,
   };
 
-  useEffect(() => {
-    actions.getPrivateData().then((payload) => {
-      console.log(payload);
-    });
-  }, []);
-
   return (
     <>
       <Usernav />
       <div className="bg2">
         <div className="container">
-          <div clasName="row gx-5">
+          <div className="row gx-5">
             <div className="col border border-danger bg-light">Dashboard</div>
             <div className="col-1"></div>
             <div className="col border border-danger bg-light">Date/Week</div>
