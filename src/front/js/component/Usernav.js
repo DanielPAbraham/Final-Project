@@ -6,7 +6,7 @@ export const Usernav = () => {
   const { store, actions } = React.useContext(Context);
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar  navcolor">
       <div className="container">
         <div className="dropdown col-3">
           <button
@@ -19,7 +19,6 @@ export const Usernav = () => {
             Nav
           </button>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-            
             <li>
               <Link to="/Dashboard">
                 <button className="dropdown-item">Dashboard</button>

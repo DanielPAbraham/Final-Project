@@ -10,7 +10,7 @@ export const Login = (props) => {
   const [user, setUser] = useState("");
 
   return (
-    <div className="wrapper fadeInDown">
+    <div className="wrapper fadeInDown align-middle">
       <div id="formContent">
         <div className="fadeIn first">
           <img

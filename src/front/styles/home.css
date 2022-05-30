@@ -22,5 +22,17 @@
 }
 
 .bg2 {
-  background-color: "#25274d";
+  background-color: #25274d;
+}
+
+.navcolor {
+  background-color: #25274d;
+}
+
+.embold {
+  color: #2e9cca;
+}
+
+.normal {
+  color: white;
 }
