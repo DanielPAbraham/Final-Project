@@ -42,10 +42,10 @@ const Modal = (props) => {
   const { store, actions } = useContext(Context);
   const params = useParams();
   const [journey, setJourney] = useState({
-    age: 0,
+    age: "",
     gender: "",
-    weight: 0,
-    height: 0,
+    weight: "",
+    height: "",
     path: "",
   });
 
@@ -66,7 +66,7 @@ const Modal = (props) => {
         </div>
         <form>
           <input
-            type="number"
+            type="text"
             id="age"
             className="fadeIn second"
             name="age"
@@ -74,14 +74,13 @@ const Modal = (props) => {
             value={journey.age}
             onChange={(e) => setJourney({ ...journey, age: e.target.value })}
           />
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+          <select class="fadeIn second" placeholder="gender">
+            <option selected>select gender</option>
+            <option value="1">male</option>
+            <option value="2">female</option>
           </select>
           <input
-            type="number"
+            type="text"
             id="weight"
             className="fadeIn third"
             name="weight"
@@ -90,7 +89,7 @@ const Modal = (props) => {
             onChange={(e) => setJourney({ ...journey, weight: e.target.value })}
           />
           <input
-            type="number"
+            type="text"
             id="height"
             className="fadeIn third"
             name="height"
@@ -98,6 +97,11 @@ const Modal = (props) => {
             value={journey.height}
             onChange={(e) => setJourney({ ...journey, height: e.target.value })}
           />
+          <select class="fadeIn second" placeholder="path">
+            <option selected>select path</option>
+            <option value="1">lose weight/fat</option>
+            <option value="2">increase muscle mass</option>
+          </select>
           <input
             type="button"
             onClick={() => {
