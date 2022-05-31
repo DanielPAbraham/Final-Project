@@ -22,6 +22,7 @@ export const Meal = ({ meal }) => {
     }, [meal.id])
 
     return (
+
         <article>
             <h1>{meal.title}</h1>
             <img src={imageUrl} alt="recipe" />
@@ -32,5 +33,18 @@ export const Meal = ({ meal }) => {
 
             <a href={meal.sourceUrl}>Go to Recipe</a>
         </article>
+
     )
 }
+
+
+
+        // <div class="card" style="width: 18rem;">
+        //     <img class="card-img-top" src={imageUrl} alt="recipe"></img>
+        //         <div class="card-body">
+        //             <h5 class="card-title">{meal.title}</h5>
+        //             <p class="card-text">Preparation time: {meal.readyInMinutes} minutes</p>
+        //             <p class="card-text">Number of servings: {meal.servings}</p>
+        //             <a href={meal.sourceUrl} class="btn btn-primary">Go to Recipe</a>
+        //         </div>
+        // </div>

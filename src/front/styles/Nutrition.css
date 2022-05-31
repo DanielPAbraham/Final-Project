@@ -4,12 +4,12 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
-}
+} */
 
-body {
+/* body {
     font-family: "Roboto", sans-serif;
     background-color: white
-}
+} */
 
 section{
     margin: 2rem 0 1rem 0;
@@ -21,36 +21,36 @@ section{
     flex-direction: column;
 }
 
-input {
+/* input {
     text-align: center;
     padding: 0.5rem;
     margin-bottom: 1rem;
-}
+} */
 
-button {
+/* button {
     padding: 0.5rem 1 rem;
     background-color: plum;
     color: white;
     border: none;
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
-}
+} */
 
-button:hover {
+/* button:hover {
     cursor: pointer;
     background-color: plum;
-}
+} */
 
-main {
+/* main {
     display:flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
-h1 {
+/* h1 {
     text-align: center;
     margin-bottom: 2rem;
-}
+} */
 
 .nutrients ul{
     display:flex;
@@ -85,18 +85,18 @@ article {
     margin-bottom: 1rem;
 }
 
-a {
+/* a {
     text-decoration: none;
     background-color: plum;
     color: white;
     width: fit-content;
     padding: 0.5rem 1rem;
-}
+} */
 
-a:hover {
+/* a:hover {
     cursor: pointer;
     background-color: plum;
-}
+} */
 
 @media only screen and (max-width: 550px) {
     .meals {
@@ -110,4 +110,4 @@ a:hover {
         align-items: center;
         width: 100%;
     }
-} */
+}

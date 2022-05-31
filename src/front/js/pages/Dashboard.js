@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Usernav } from "../component/Usernav";
-import { Datetime } from "../component/Datetime"
+import { WorkoutTable } from "../component/workoutTable.js";
 
 export const Dashboard = (props) => {
   const { store, actions } = useContext(Context);
@@ -34,18 +34,7 @@ export const Dashboard = (props) => {
           <br></br>
           <div className="container card bg2">
             <div className="row gx-5">
-              <div className="col-4 border border-danger bg-light">
-                <p className="embold">Up Coming: Workout A</p>
-                <br></br>
-                <br></br>
-                Squat: 3x5 205
-                <br></br>
-                Bench 3x5 165
-                <br></br>
-                Chin-Ups 3x5 35
-                <br></br>
-                Accessory of Choice YxZ XYZ
-              </div>
+            <WorkoutTable />
               <div className="col-1"></div>
               <div className="col-4 border border-danger bg-light">
                 Nutrition

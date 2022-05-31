@@ -17,13 +17,13 @@ const getState = ({ getStore, getActions, setStore }) => {
       // Use getActions to call a function within a fuction
 
       getRecipeData: () => {
-        fetch(`https://api.spoonacular.com/recipes/complexSearch${getStore().key}`)
+        fetch(`https://api.spoonacular.com/recipes/complexSearch${getStore().key}&&addRecipeInformation=true`)
           .then((response) =>
             response.json()
           )
           .then((responseAsJson) => {
             setStore({ complex: responseAsJson.results });
-            console.log(getStore().complex);
+            console.log("These are my recipes", getStore().complex);
           })
           .catch((error) => {
             console.log("Looks like there was a problem: \n", error);
