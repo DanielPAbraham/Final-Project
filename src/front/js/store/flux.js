@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
+      recipes: [],
       mealData: [],
       vegetarian: [],
       vegan: [],
@@ -30,18 +31,15 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
       },
 
-      getMealData: () => {
-        fetch(``)
-          .then((response) =>
-            response.json()
-          )
-          .then((responseAsJson) => {
-            setStore({ complex: responseAsJson.results });
-            console.log(getStore().complex);
-          })
-          .catch((error) => {
-            console.log("Looks like there was a problem: \n", error);
-          });
+      loadRecipe: async (id) => {
+        const response = await fetch(
+          process.env.BACKEND_URL + `/api/guest/${id}`
+        );
+        if (response.status === 200) {
+          const payload = await response.json();
+          setStore({ recipes: payload });
+          return payload;
+        }
       },
 
       login: (user) => {
