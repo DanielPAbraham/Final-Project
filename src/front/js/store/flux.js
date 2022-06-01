@@ -10,17 +10,32 @@ const getState = ({ getStore, getActions, setStore }) => {
       pescaterian: [],
       complex: [],
       message: null,
-      user: "",
+      user: null,
+      journeys: [{ type: "muscle mass" }, { type: "weight loss" }],
+      userAccounts: [
+        {
+          name: "John",
+          email: "john@gmail.com",
+          journey: "weight loss",
+        },
+        {
+          name: "Tom",
+          email: "tom@gmail.com",
+          journey: "muscle mass",
+        },
+      ],
       key: "?apiKey=e23e7c5a9ff34fee9bfc874ea36bb9c1",
     },
     actions: {
       // Use getActions to call a function within a fuction
-
+      addJourney: () => {},
       getRecipeData: () => {
-        fetch(`https://api.spoonacular.com/recipes/complexSearch${getStore().key}&&addRecipeInformation=true`)
-          .then((response) =>
-            response.json()
-          )
+        fetch(
+          `https://api.spoonacular.com/recipes/complexSearch${
+            getStore().key
+          }&&addRecipeInformation=true`
+        )
+          .then((response) => response.json())
           .then((responseAsJson) => {
             setStore({ complex: responseAsJson.results });
             console.log("These are my recipes", getStore().complex);
@@ -32,9 +47,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       getMealData: () => {
         fetch(``)
-          .then((response) =>
-            response.json()
-          )
+          .then((response) => response.json())
           .then((responseAsJson) => {
             setStore({ complex: responseAsJson.results });
             console.log(getStore().complex);
@@ -44,7 +57,8 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
       },
 
-      login: (user) => {
+      login: (email) => {
+        let user = getStore().userAccounts.find((user) => user.email == email);
         setStore({ user: user });
         return true;
       },

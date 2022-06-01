@@ -7,7 +7,7 @@ export const Login = (props) => {
   const { store, actions } = useContext(Context);
   const params = useParams();
 
-  const [user, setUser] = useState("");
+  const [userEmail, setUserEmail] = useState("");
 
   return (
     <div className="wrapper fadeInDown align-middle">
@@ -17,6 +17,7 @@ export const Login = (props) => {
             src="https://upload.wikimedia.org/wikipedia/commons/1/12/User_icon_2.svg"
             id="userIcon"
             alt="User Icon"
+            style={{ height: "100px", width: "auto" }}
           />
         </div>
         <form>
@@ -26,19 +27,19 @@ export const Login = (props) => {
             className="fadeIn second"
             name="login"
             placeholder="login"
-            onChange={(e) => setUser(e.target.value)}
+            onChange={(e) => setUserEmail(e.target.value)}
           />
           <input
-            type="text"
+            type="password"
             id="password"
             className="fadeIn third"
-            name="login"
+            name="password"
             placeholder="password"
           />
           <input
             type="button"
             onClick={() => {
-              if (actions.login(user)) props.history.push("/dashboard");
+              if (actions.login(userEmail)) props.history.push("/dashboard");
             }}
             className="fadeIn fourth"
             value="Log In"
