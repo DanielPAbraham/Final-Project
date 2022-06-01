@@ -14,7 +14,7 @@ export const MyJourney = (props) => {
       <div className="">
         <div className="text-center">
           <h3>
-            {store.user.name}, your journey is: {store.user.journey}
+            {store.userAccounts.name}, your journey is: {store.userAccounts.journey}
           </h3>
           <button
             className="btn btn-large btn-outline-primary"
