@@ -16,7 +16,7 @@ export const Dashboard = (props) => {
   return (
     <>
       <Usernav />
-      <div className="bg2 fullscreen h-100 text-center mt-5 end-0">
+      <div className="fullscreen h-100 text-center mt-5 end-0">
         <div className="bg-transparent card">
           <div className="container">
             <br></br>
@@ -32,9 +32,9 @@ export const Dashboard = (props) => {
           </div>
           <br></br>
           <br></br>
-          <div className="container card bg2">
+          <div className="container card">
             <div className="row gx-5">
-            <WorkoutTable />
+              <WorkoutTable />
               <div className="col-1"></div>
               <div className="col-4 border border-danger bg-light">
                 Nutrition

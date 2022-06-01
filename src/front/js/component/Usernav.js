@@ -30,6 +30,11 @@ export const Usernav = () => {
               </Link>
             </li>
             <li>
+              <Link to="/myjourney">
+                <button className="dropdown-item">My Journey</button>
+              </Link>
+            </li>
+            <li>
               <Link to="/Nutrition">
                 <button className="dropdown-item">My Nutrition</button>
               </Link>

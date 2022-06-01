@@ -11,8 +11,11 @@ export const MyJourney = (props) => {
   return (
     <>
       <Usernav />
-      <div className="bg2">
+      <div className="">
         <div className="text-center">
+          <h3>
+            {store.user.name}, your journey is: {store.user.journey}
+          </h3>
           <button
             className="btn btn-large btn-outline-primary"
             onClick={() => setShow(true)}
@@ -21,7 +24,8 @@ export const MyJourney = (props) => {
           </button>
         </div>
         <div>
-          Journey sections:
+          Based on your journey, the following information will help you achieve
+          your goals:
           <div className="border rounded my-3 py-3">General info</div>
           <div className="border rounded my-3 py-3">Nutrition</div>
           <div className="border rounded my-3 py-3">Exercise program</div>
@@ -29,7 +33,7 @@ export const MyJourney = (props) => {
           <div className="border rounded my-3 py-3">Calorie tracker</div>
         </div>
       </div>
-      <Modal show={show} />
+      <Modal show={show} close={() => setShow(false)} />
     </>
   );
 };
@@ -62,6 +66,7 @@ const Modal = (props) => {
             src="https://upload.wikimedia.org/wikipedia/commons/1/12/User_icon_2.svg"
             id="userIcon"
             alt="User Icon"
+            style={{ height: "100px", width: "auto" }}
           />
         </div>
         <form>
@@ -74,8 +79,8 @@ const Modal = (props) => {
             value={journey.age}
             onChange={(e) => setJourney({ ...journey, age: e.target.value })}
           />
-          <select class="fadeIn second" placeholder="gender">
-            <option selected>select gender</option>
+          <select className="fadeIn second">
+            <option value="-1">select gender</option>
             <option value="1">male</option>
             <option value="2">female</option>
           </select>
@@ -97,8 +102,8 @@ const Modal = (props) => {
             value={journey.height}
             onChange={(e) => setJourney({ ...journey, height: e.target.value })}
           />
-          <select class="fadeIn second" placeholder="path">
-            <option selected>select path</option>
+          <select className="fadeIn second">
+            <option value="-1">select path</option>
             <option value="1">lose weight/fat</option>
             <option value="2">increase muscle mass</option>
           </select>
@@ -108,13 +113,13 @@ const Modal = (props) => {
               if (actions.addJourney(journey)) props.history.push("/myjourney");
             }}
             className="fadeIn fourth"
-            value="Start Journey"
+            value="Set Journey"
           />
         </form>
 
         <div id="formFooter">
-          <a className="underlineHover" href="#">
-            Reset
+          <a className="underlineHover" href="#" onClick={props.close}>
+            Close
           </a>
         </div>
       </div>
