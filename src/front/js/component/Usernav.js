@@ -19,21 +19,22 @@ export const Usernav = () => {
             Nav
           </button>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <li>
+          <li>
+              <Link to="/myjourney">
+                <button className="dropdown-item">My Journey</button>
+              </Link>
+            </li>
+            {/* <li>
               <Link to="/Dashboard">
                 <button className="dropdown-item">Dashboard</button>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/Profile">
                 <button className="dropdown-item">My Profile</button>
               </Link>
             </li>
-            <li>
-              <Link to="/myjourney">
-                <button className="dropdown-item">My Journey</button>
-              </Link>
-            </li>
+            
             <li>
               <Link to="/Nutrition">
                 <button className="dropdown-item">My Nutrition</button>

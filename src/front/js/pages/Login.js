@@ -39,7 +39,7 @@ export const Login = (props) => {
           <input
             type="button"
             onClick={() => {
-              if (actions.login(userEmail)) props.history.push("/dashboard");
+              if (actions.login(userEmail)) props.history.push("/myJourney");
             }}
             className="fadeIn fourth"
             value="Log In"
