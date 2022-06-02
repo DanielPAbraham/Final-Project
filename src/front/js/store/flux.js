@@ -11,7 +11,10 @@ const getState = ({ getStore, getActions, setStore }) => {
       complex: [],
       message: null,
       user: null,
-      journeys: [{ type: "muscle mass" }, { type: "weight loss" }],
+      journeys: [
+        { type: "muscle mass", nutrition: "", exercises: "", programs: "" },
+        { type: "weight loss", nutrition: "", exercises: "", programs: "" },
+      ],
       userAccounts: [
         {
           name: "John",

@@ -12,26 +12,44 @@ export const MyJourney = (props) => {
     <>
       <Usernav />
       <div className="">
-        <div className="text-center">
-          <h3>
-            {store.user.name}, your journey is: {store.user.journey}
-          </h3>
-          <button
-            className="btn btn-large btn-outline-primary"
-            onClick={() => setShow(true)}
-          >
-            Set Your Journey
-          </button>
-        </div>
-        <div>
-          Based on your journey, the following information will help you achieve
-          your goals:
-          <div className="border rounded my-3 py-3">General info</div>
-          <div className="border rounded my-3 py-3">Nutrition</div>
-          <div className="border rounded my-3 py-3">Exercise program</div>
-          <div className="border rounded my-3 py-3">Cardio tracker</div>
-          <div className="border rounded my-3 py-3">Calorie tracker</div>
-        </div>
+        {store.user ? (
+          <>
+            <div className="text-center">
+              <h3>
+                {store.user.name}, your journey is: {store.user.journey}
+              </h3>
+              <button
+                className="btn btn-lg btn-outline-primary"
+                onClick={() => setShow(true)}
+              >
+                Set Your Journey
+              </button>
+            </div>
+            <div>
+              Based on your journey, the following tools and information will
+              help you achieve your goals:
+              <div className="border rounded my-3 py-3">General info</div>
+              <div className="border rounded my-3 py-3">Nutrition</div>
+              <div className="border rounded my-3 py-3">Exercise program</div>
+              <div className="border rounded my-3 py-3">BMI calculator</div>
+              <div className="border rounded my-3 py-3">Cardio tracker</div>
+              <div className="border rounded my-3 py-3">Calorie tracker</div>
+            </div>
+          </>
+        ) : (
+          <div className="text-center">
+            <h3>
+              <Link to="/login">
+                <button
+                  type="text"
+                  className="btn btn-lg btn-outline-warning my-5"
+                >
+                  Log In
+                </button>
+              </Link>
+            </h3>
+          </div>
+        )}
       </div>
       <Modal show={show} close={() => setShow(false)} />
     </>
