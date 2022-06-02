@@ -4,6 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Usernav } from "../component/Usernav";
 import { Bmi } from "../component/BmiCalculator";
+import { NutrientTracker } from "../component/NutrientTracker";
+
 
 export const MyJourney = (props) => {
   const { store, actions } = useContext(Context);
@@ -20,7 +22,7 @@ export const MyJourney = (props) => {
                 {store.user.name}, your journey is: {store.user.journey}
               </h3>
               <button
-                className="btn btn-lg btn-outline-primary"
+                className="btn btn-lg btn-outline-warning"
                 onClick={() => setShow(true)}
               >
                 Set Your Journey
@@ -38,8 +40,14 @@ export const MyJourney = (props) => {
                   <Bmi />
                 </div>
               </div>
-              <div className="border rounded my-3 py-3">Cardio tracker</div>
-              <div className="border rounded my-3 py-3">Calorie tracker</div>
+              <div className="border rounded my-3 py-3">
+                <h4>Exercise tracker</h4>
+                <ExerciseTracker />
+              </div>
+              <div className="border rounded my-3 py-3">
+                <h4>Nutrient tracker</h4>
+                <NutrientTracker />
+              </div>
             </div>
           </>
         ) : (
@@ -48,7 +56,7 @@ export const MyJourney = (props) => {
               <Link to="/login">
                 <button
                   type="text"
-                  className="btn btn-lg btn-outline-warning my-5"
+                  className="btn btn-lg btn-outline-info my-5"
                 >
                   Log In
                 </button>

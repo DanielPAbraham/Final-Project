@@ -43,7 +43,7 @@ export const Bmi = () => {
         onChange={(e) => setWeight(e.target.value)}
         placeholder="Your weight in lbs"
       />
-      <button className="btn btn-lg btn-outline-success" onClick={handleBmi}>
+      <button className="btn btn-lg btn-outline-info" onClick={handleBmi}>
         Calculate
       </button>
       <h1>{bmi}</h1>
