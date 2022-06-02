@@ -8,11 +8,16 @@ export const Bmi = () => {
   const [info, setInfo] = useState();
   const [height, setHeight] = useState();
   const [weight, setWeight] = useState();
+
   const handleBmi = () => {
+    //   [Number(weight) / Number(height) / Number(height)] * 10000
     let val = (
-      [Number(weight) / Number(height) / Number(height)] * 10000
+      (Number(weight) / (Number(height) * Number(height))) *
+      703
     ).toFixed(1);
+
     setBmi(val);
+
     if (val < 18.5) {
       setInfo("Under Weight");
     } else if (val > 18.5 && val <= 24.9) {
@@ -23,19 +28,20 @@ export const Bmi = () => {
       setInfo("Obese");
     }
   };
+
   return (
     <div>
       <input
         type="text"
         className="w-25"
         onChange={(e) => setHeight(e.target.value)}
-        placeholder="height in cm"
+        placeholder="Your height in inches"
       />
       <input
         type="text"
         className="w-25"
         onChange={(e) => setWeight(e.target.value)}
-        placeholder="Weight in kg"
+        placeholder="Your weight in lbs"
       />
       <button className="btn btn-lg btn-outline-success" onClick={handleBmi}>
         Calculate
