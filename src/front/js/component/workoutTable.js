@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import "../../styles/workoutTable.css";
 
 const columns = [
     { field: 'id', headerName: 'ID', width: 90 },

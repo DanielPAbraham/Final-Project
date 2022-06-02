@@ -20,44 +20,12 @@ export const Dashboard = (props) => {
         <div className="bg-transparent card">
           <div className="container">
             <br></br>
-            <div className="row">
-              <div className="col-1 border border-danger bg-light">
-                Dashboard
-              </div>
-              <div className="col-4"></div>
-              <div className="col-1 border border-danger bg-light">
-                Date/Week
-              </div>
-            </div>
           </div>
           <br></br>
           <br></br>
           <div className="container card">
             <div className="row gx-5">
               <WorkoutTable />
-              <div className="col-1"></div>
-              <div className="col-4 border border-danger bg-light">
-                Nutrition
-                <br></br>
-                <ul>
-                  <li>
-                    Donec vel arcu dictum, fermentum ipsum sed, pellentesque dui
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
-                  <li>
-                    Integer sed ligula id quam tristique fringilla ac eget
-                    risus.
-                  </li>
-                </ul>
-              </div>
-              <div className="col-2 border border-danger bg-light">
-                <img
-                  src="https://cdn.icon-icons.com/icons2/1339/PNG/512/letterx_87521.png"
-                  className="img-fluid"
-                ></img>
-              </div>
             </div>
           </div>
           <br></br>

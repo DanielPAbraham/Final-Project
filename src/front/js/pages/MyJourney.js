@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Usernav } from "../component/Usernav";
+import { Bmi } from "../component/BmiCalculator";
 
 export const MyJourney = (props) => {
   const { store, actions } = useContext(Context);
@@ -31,7 +32,12 @@ export const MyJourney = (props) => {
               <div className="border rounded my-3 py-3">General info</div>
               <div className="border rounded my-3 py-3">Nutrition</div>
               <div className="border rounded my-3 py-3">Exercise program</div>
-              <div className="border rounded my-3 py-3">BMI calculator</div>
+              <div className="border rounded my-3 py-3">
+                <h4>BMI calculator</h4>
+                <div>
+                  <Bmi />
+                </div>
+              </div>
               <div className="border rounded my-3 py-3">Cardio tracker</div>
               <div className="border rounded my-3 py-3">Calorie tracker</div>
             </div>

@@ -10,13 +10,13 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-      <div class="card bg-dark text-white h-100 w-100">
+      <div className="card bg-dark text-white h-100 w-100">
         <img
           src="https://phantom-marca.unidadeditorial.es/746e69f29df0fa7da1f9df1cffc2af10/crop/0x20/1499x861/resize/1320/f/jpg/assets/multimedia/imagenes/2022/01/12/16419960151339.jpg"
-          class="card-img"
+          className="card-img"
           alt="..."
         ></img>
-        <div class="card-img-overlay ">
+        <div className="card-img-overlay ">
           {store.user ? (
             <div className="ml-auto">
               <Link to="/demo">
