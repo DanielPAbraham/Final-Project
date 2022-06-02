@@ -30,10 +30,11 @@ const getState = ({ getStore, getActions, setStore }) => {
     actions: {
       // Use getActions to call a function within a fuction
       addJourney: () => { },
+
       getRecipeData: () => {
         fetch(
           `https://api.spoonacular.com/recipes/complexSearch${getStore().key
-          }&&addRecipeInformation=true`
+          }&&titleMatch=`
         )
           .then((response) => response.json())
           .then((responseAsJson) => {
