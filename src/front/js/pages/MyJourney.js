@@ -5,6 +5,9 @@ import { Context } from "../store/appContext";
 import { Usernav } from "../component/Usernav";
 import { Bmi } from "../component/BmiCalculator";
 import { NutrientTracker } from "../component/NutrientTracker";
+import { ExerciseTracker } from "../component/ExerciseTracker";
+import { WorkoutTable } from "../component/workoutTable";
+
 
 
 export const MyJourney = (props) => {

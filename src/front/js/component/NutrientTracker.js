@@ -52,7 +52,7 @@ export const NutrientTracker = (props) => {
           type="text"
           name="proteins"
           className="col"
-          value={entry.proteins ? entry.proteins : "Proteins in grams"}
+          value={entry.proteins}
           onChange={(e) =>
             setEntry({ ...entry, [e.target.name]: e.target.value })
           }
@@ -62,7 +62,7 @@ export const NutrientTracker = (props) => {
           type="text"
           name="carbs"
           className="col"
-          value={entry.carbs > 0 ? entry.carbs : "Carbs in grams"}
+          value={entry.carbs}
           onChange={(e) =>
             setEntry({ ...entry, [e.target.name]: e.target.value })
           }
@@ -72,7 +72,7 @@ export const NutrientTracker = (props) => {
           type="text"
           name="fats"
           className="col"
-          value={entry.fats > 0 ? entry.fats : "Fats in grams"}
+          value={entry.fats}
           onChange={(e) =>
             setEntry({ ...entry, [e.target.name]: e.target.value })
           }
