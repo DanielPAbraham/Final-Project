@@ -34,7 +34,11 @@ export const Usernav = () => {
                 <button className="dropdown-item">My Profile</button>
               </Link>
             </li>
-            
+            <li>
+              <Link to="/ExercisePlan">
+                <button className="dropdown-item">Workout Plan</button>
+              </Link>
+            </li>
             <li>
               <Link to="/Nutrition">
                 <button className="dropdown-item">Meal Planner</button>

@@ -3,30 +3,30 @@ import { DataGrid } from '@mui/x-data-grid';
 import "../../styles/workoutTable.css";
 
 const columns = [
-    { field: 'id', headerName: 'ID', width: 90 },
+    { field: 'id', headerName: 'Exercise', width: 80 },
     {
-        field: 'firstName',
-        headerName: 'First name',
-        width: 150,
-        editable: true,
+        field: 'Sets',
+        headerName: 'Sets',
+        width: 30,
+        editable: false,
     },
     {
-        field: 'lastName',
-        headerName: 'Last name',
-        width: 150,
-        editable: true,
+        field: 'Reps',
+        headerName: 'Reps',
+        width: 30,
+        editable: false,
     },
     {
-        field: 'age',
-        headerName: 'Age',
+        field: 'Weight Used',
+        headerName: 'Weight Used',
         type: 'number',
-        width: 110,
-        editable: true,
+        width: 100,
+        editable: false,
     },
     {
-        field: 'fullName',
-        headerName: 'Full name',
-        description: 'This column has a value getter and is not sortable.',
+        field: 'Notes',
+        headerName: 'Notes',
+        description: 'This column is for writing notes for your workout.',
         sortable: false,
         width: 160,
         valueGetter: (params) =>
