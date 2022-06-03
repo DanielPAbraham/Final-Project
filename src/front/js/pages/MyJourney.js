@@ -8,8 +8,6 @@ import { NutrientTracker } from "../component/NutrientTracker";
 import { ExerciseTracker } from "../component/ExerciseTracker";
 import { WorkoutTable } from "../component/workoutTable";
 
-
-
 export const MyJourney = (props) => {
   const { store, actions } = useContext(Context);
   const [show, setShow] = useState(false);
@@ -18,12 +16,23 @@ export const MyJourney = (props) => {
     <>
       <Usernav />
       <div className="">
-        {store.user ? (
+        {!store.user ? (
+          <div className="text-center">
+            <h3>
+              <Link to="/login">
+                <button
+                  type="text"
+                  className="btn btn-lg btn-outline-info my-5"
+                >
+                  Log In
+                </button>
+              </Link>
+            </h3>
+          </div>
+        ) : store.user.journey == "muscle mass" ? (
           <>
             <div className="text-center">
-              <h3>
-                {store.user.name}, your journey is: {store.user.journey}
-              </h3>
+              <h3>{store.user.name}, your journey is: Building Muscle</h3>
               <button
                 className="btn btn-lg btn-outline-warning"
                 onClick={() => setShow(true)}
@@ -34,9 +43,58 @@ export const MyJourney = (props) => {
             <div>
               Based on your journey, the following tools and information will
               help you achieve your goals:
-              <div className="border rounded my-3 py-3">General info</div>
-              <div className="border rounded my-3 py-3">Nutrition</div>
-              <div className="border rounded my-3 py-3">Exercise program</div>
+              <div className="border rounded my-3 py-3">
+                <strong>General info</strong>
+                <br></br>
+                <p className="text-center">
+                  {" "}
+                  Hello {store.user.name}, this is where you'll find all of your
+                  information for your program! On this page you'll have access
+                  to personalized advice to fit your goals. Are you ready to get
+                  started?
+                </p>
+              </div>
+              <div className="border rounded my-3 py-3">
+                <strong>Nutrition</strong>
+                <br></br>
+                <p className="text-center">
+                  {" "}
+                  It is possible to gain muscle without a surplus or even with a
+                  calorie defecit, though it is substantially more difficult. If
+                  you burn more calories than you consume, your body will
+                  prioritize conserving energy and will not support muscle
+                  growth. Because of this, we recommend a calorie surplus in
+                  order to gain muscle efficiently. In addition, it is essential
+                  to have a high protein intake. A good baseline to begin with
+                  would be 70% of your body weight (lbs) in grams, daily.
+                  Healthy fats are also important, they may not directly help
+                  you build muscle but they do help boost your immune system and
+                  maintain healthy hormonal functions. This is essential for
+                  muscle growth and general good health.
+                </p>
+              </div>
+              <div className="border rounded my-3 py-3">
+                <strong>Exercise Program</strong>
+                <br></br>
+                <p className="text-center">
+                  To build muscle efficiently, it is better to work out multiple
+                  muscles at once. While bicept curls and the like should have
+                  their place in your routine, they should not be it's backbone.
+                  Exercises that work out multiple muscle groups are not only a
+                  more efficient use of your time, they also allow you to lift
+                  more weight at a time which is essential to building muscle. A
+                  great example would be the bench press (there's a reason why
+                  it's a staple in many athlete's regimes), the bench press
+                  helps strengthen most of your upper body at once, including
+                  the tricept, bicept, and pectorals. A common issue that arises
+                  when trying to build muscle is stagnation. To avoid plateauing
+                  it is imperitive that you progressively increase the weight
+                  that you work out with. Another commonly neglected but very
+                  important practice, is giving your muscles time to rest.
+                  Without rest, you sharply increase your chance of injury and
+                  prevent muscle growth.{" "}
+                </p>
+              </div>
               <div className="border rounded my-3 py-3">
                 <h4>BMI calculator</h4>
                 <div>
@@ -54,18 +112,72 @@ export const MyJourney = (props) => {
             </div>
           </>
         ) : (
-          <div className="text-center">
-            <h3>
-              <Link to="/login">
-                <button
-                  type="text"
-                  className="btn btn-lg btn-outline-info my-5"
-                >
-                  Log In
-                </button>
-              </Link>
-            </h3>
-          </div>
+          <>
+            <div className="text-center">
+              <h3>{store.user.name}, your journey is: Weight Loss</h3>
+              <button
+                className="btn btn-lg btn-outline-warning"
+                onClick={() => setShow(true)}
+              >
+                Set Your Journey
+              </button>
+            </div>
+            <div>
+              Based on your journey, the following tools and information will
+              help you achieve your goals:
+              <div className="border rounded my-3 py-3">
+                <strong>General info</strong>
+                <br></br>
+                <p className="text-center">
+                  {" "}
+                  Hello {store.user.name}, this is where you'll find all of your
+                  information for your program! On this page you'll have access
+                  to personalized advice to fit your goals. Are you ready to get
+                  started?
+                </p>
+              </div>
+              <div className="border rounded my-3 py-3">
+                <strong>Nutrition</strong>
+                <br></br>
+                <p>
+                  In order to lose weight, the single most important factor is a
+                  calorie deficit. I cannot stress this enough. It's the first
+                  law of thermodynamics; Energy can neither be created nor be
+                  destroyed, it can only be transferred from one form to
+                  another. This means that no <u>matter</u> what you will lose
+                  weight if you burn more calories than you take in. The
+                  difficulty comes from maintaining the dicipline to do so and
+                  correctly evaluating how many calories you take in/expend.{" "}
+                </p>
+              </div>
+              <div className="border rounded my-3 py-3">
+                <strong>Exercise Program</strong>
+                <br></br>
+                <p className="text-center">
+                  To build lose weight efficiently, the two types of exercise
+                  you should focus on are; strength training and cardio. Cardio
+                  will help boost you metabolism, keeping you healthy and
+                  burning more calories. Strength training helps you build
+                  muscle which allows you to burn more calories over time, in
+                  turn making you lose more fat.{" "}
+                </p>
+              </div>
+              <div className="border rounded my-3 py-3">
+                <h4>BMI calculator</h4>
+                <div>
+                  <Bmi />
+                </div>
+              </div>
+              <div className="border rounded my-3 py-3">
+                <h4>Exercise tracker</h4>
+                <ExerciseTracker />
+              </div>
+              <div className="border rounded my-3 py-3">
+                <h4>Nutrient tracker</h4>
+                <NutrientTracker />
+              </div>
+            </div>
+          </>
         )}
       </div>
       <Modal show={show} close={() => setShow(false)} />
