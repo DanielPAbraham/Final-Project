@@ -46,7 +46,7 @@ export const MyJourney = (props) => {
               <div className="border rounded my-3 py-3">
                 <strong>General info</strong>
                 <br></br>
-                <p class="text-center">
+                <p className="text-center">
                   {" "}
                   Hello {store.user.name}, this is where you'll find all of your
                   information for your program! On this page you'll have access
@@ -57,7 +57,7 @@ export const MyJourney = (props) => {
               <div className="border rounded my-3 py-3">
                 <strong>Nutrition</strong>
                 <br></br>
-                <p class="text-center">
+                <p className="text-center">
                   {" "}
                   It is possible to gain muscle without a surplus or even with a
                   calorie defecit, though it is substantially more difficult. If
@@ -76,7 +76,7 @@ export const MyJourney = (props) => {
               <div className="border rounded my-3 py-3">
                 <strong>Exercise Program</strong>
                 <br></br>
-                <p class="text-center">
+                <p className="text-center">
                   To build muscle efficiently, it is better to work out multiple
                   muscles at once. While bicept curls and the like should have
                   their place in your routine, they should not be it's backbone.
@@ -128,7 +128,7 @@ export const MyJourney = (props) => {
               <div className="border rounded my-3 py-3">
                 <strong>General info</strong>
                 <br></br>
-                <p class="text-center">
+                <p className="text-center">
                   {" "}
                   Hello {store.user.name}, this is where you'll find all of your
                   information for your program! On this page you'll have access
@@ -153,7 +153,7 @@ export const MyJourney = (props) => {
               <div className="border rounded my-3 py-3">
                 <strong>Exercise Program</strong>
                 <br></br>
-                <p class="text-center">
+                <p className="text-center">
                   To build lose weight efficiently, the two types of exercise
                   you should focus on are; strength training and cardio. Cardio
                   will help boost you metabolism, keeping you healthy and

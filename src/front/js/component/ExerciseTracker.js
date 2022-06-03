@@ -8,29 +8,28 @@ export const ExerciseTracker = (props) => {
   const [dataArray, setDataArray] = useState([]);
   const [entry, setEntry] = useState({
     date: "",
-    proteins: 0,
-    carbs: 0,
-    fats: 0,
-    calories: 0,
+    muscleGroup: "",
+    totalWeight: "",
+    numberSets: "",
+    numberReps: "",
     progress: "",
   });
 
   const makeEntry = () => {
-    entry.calories = entry.proteins * 4 + entry.carbs * 4 + entry.fats * 9;
-    let message = "";
-    if (entry.proteins < 100) message += "not enough proteins; ";
-    if (entry.carbs < 150) message += "not enough carbs; ";
-    if (entry.fats > 100) message += "too much fats; ";
-    if (message == "") message = "On track";
+    let totalReps = parseInt(entry.numberReps) * parseInt(entry.numberSets);
+    let loadPerRep = parseInt(entry.totalWeight) / parseInt(totalReps);
+    let message = `Your load-per-rep was ${loadPerRep}`;
     entry.progress = message;
     console.log(entry);
+
     setDataArray([...dataArray, entry]);
+
     setEntry({
       date: "",
-      proteins: 0,
-      carbs: 0,
-      fats: 0,
-      calories: 0,
+      muscleGroup: "",
+      totalWeight: "",
+      numberSets: "",
+      numberReps: "",
       progress: "",
     });
   };
@@ -50,33 +49,43 @@ export const ExerciseTracker = (props) => {
         />
         <input
           type="text"
-          name="proteins"
+          name="muscleGroup"
           className="col"
-          value={entry.proteins ? entry.proteins : "Proteins in grams"}
+          value={entry.muscleGroup && entry.muscleGroup}
           onChange={(e) =>
             setEntry({ ...entry, [e.target.name]: e.target.value })
           }
-          placeholder="Proteins in grams"
+          placeholder="Muscle group"
         />
         <input
           type="text"
-          name="carbs"
+          name="totalWeight"
           className="col"
-          value={entry.carbs > 0 ? entry.carbs : "Carbs in grams"}
+          value={entry.totalWeight}
           onChange={(e) =>
             setEntry({ ...entry, [e.target.name]: e.target.value })
           }
-          placeholder="Carbs in grams"
+          placeholder="Total weight"
         />
         <input
           type="text"
-          name="fats"
+          name="numberSets"
           className="col"
-          value={entry.fats > 0 ? entry.fats : "Fats in grams"}
+          value={entry.numberSets}
           onChange={(e) =>
             setEntry({ ...entry, [e.target.name]: e.target.value })
           }
-          placeholder="Fats in grams"
+          placeholder="Number of sets"
+        />
+        <input
+          type="text"
+          name="numberReps"
+          className="col"
+          value={entry.numberReps}
+          onChange={(e) =>
+            setEntry({ ...entry, [e.target.name]: e.target.value })
+          }
+          placeholder="Number of reps"
         />
         <div className="col">
           <button
@@ -91,10 +100,10 @@ export const ExerciseTracker = (props) => {
         <thead className="">
           <tr>
             <th scope="col">Date</th>
-            <th scope="col">Protein (grams)</th>
-            <th scope="col">Carbs (grams)</th>
-            <th scope="col">Fats (grams)</th>
-            <th scope="col">Calories</th>
+            <th scope="col">Muscle group</th>
+            <th scope="col">Total weight</th>
+            <th scope="col"># of sets</th>
+            <th scope="col"># of reps</th>
             <th scope="col">Progress</th>
           </tr>
         </thead>
@@ -103,19 +112,11 @@ export const ExerciseTracker = (props) => {
             return (
               <tr key={ind}>
                 <th scope="row">{elm.date}</th>
-                <td>{elm.proteins}</td>
-                <td>{elm.carbs}</td>
-                <td>{elm.fats}</td>
-                <td>{elm.calories}</td>
-                <td
-                  className={
-                    elm.progress != "On track"
-                      ? "text-danger border border-danger border-3"
-                      : "text-success"
-                  }
-                >
-                  {elm.progress}
-                </td>
+                <td>{elm.muscleGroup}</td>
+                <td>{elm.totalWeight}</td>
+                <td>{elm.numberSets}</td>
+                <td>{elm.numberReps}</td>
+                <td className="text-success">{elm.progress}</td>
               </tr>
             );
           })}
