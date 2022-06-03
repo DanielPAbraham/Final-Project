@@ -4,8 +4,9 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Usernav } from "../component/Usernav";
 import { Bmi } from "../component/BmiCalculator";
-import { ExerciseTracker } from "../component/ExerciseTracker";
 import { NutrientTracker } from "../component/NutrientTracker";
+import { ExerciseTracker } from "../component/ExerciseTracker";
+import { WorkoutTable } from "../component/workoutTable";
 
 export const MyJourney = (props) => {
   const { store, actions } = useContext(Context);

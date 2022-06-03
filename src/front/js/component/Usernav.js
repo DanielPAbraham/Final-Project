@@ -37,12 +37,12 @@ export const Usernav = () => {
             
             <li>
               <Link to="/Nutrition">
-                <button className="dropdown-item">My Nutrition</button>
+                <button className="dropdown-item">Meal Planner</button>
               </Link>
             </li>
             <li>
               <Link to="/Recipes">
-                <button className="dropdown-item">My Recipies</button>
+                <button className="dropdown-item">Recipe Search</button>
               </Link>
             </li>
             <li>

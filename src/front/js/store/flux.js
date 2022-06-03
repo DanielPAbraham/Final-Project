@@ -13,7 +13,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       message: null,
       user: null,
       journeys: [
-        { type: "muscle mass", nutrition: "", exercises: "", programs: "" },
+        { type: "Build Muscle", nutrition: "", exercises: "", programs: "" },
         { type: "weight loss", nutrition: "", exercises: "", programs: "" },
       ],
       userAccounts: [
@@ -25,7 +25,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         {
           name: "Tom",
           email: "tom@gmail.com",
-          journey: "muscle mass",
+          journey: "Build Muscle",
         },
       ],
       key: "?apiKey=e23e7c5a9ff34fee9bfc874ea36bb9c1",
@@ -33,11 +33,12 @@ const getState = ({ getStore, getActions, setStore }) => {
     actions: {
       // Use getActions to call a function within a fuction
       addJourney: () => {},
-      getRecipeData: () => {
+
+      getRecipeData: (ingredient) => {
         fetch(
           `https://api.spoonacular.com/recipes/complexSearch${
             getStore().key
-          }&&addRecipeInformation=true`
+          }&&titleMatch=${ingredient}`
         )
           .then((response) => response.json())
           .then((responseAsJson) => {

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 import "../../styles/Nutrition.css";
+import { Card } from "react-bootstrap";
 
 export const Meal = ({ meal }) => {
     const { store, actions } = React.useContext(Context);
