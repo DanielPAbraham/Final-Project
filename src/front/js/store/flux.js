@@ -51,10 +51,27 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
       },
 
+      findByNutrients: (carbs, proteins) => {
+        fetch(
+          `https://api.spoonacular.com/recipes/complexSearch${
+            getStore().key
+          }&maxCarbs=${carbs}&minProteins=${proteins}`
+        )
+          .then((response) => response.json())
+          .then((responseAsJson) => {
+            setStore({ complex: responseAsJson.results });
+            console.log("These are my recipes", getStore().complex);
+          })
+          .catch((error) => {
+            console.log("Looks like there was a problem: \n", error);
+          });
+      },
 
       loadWorkoutTable: async () => {
         try {
-          const response = await fetch(`${process.env.BACKEND_URL}/api/workout`);
+          const response = await fetch(
+            `${process.env.BACKEND_URL}/api/workout`
+          );
           if (response.ok) {
             const data = await response.json();
             localStorage.setItem("data", JSON.stringify(data));
@@ -64,7 +81,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         } catch (error) {
           throw Error("something went wrong");
         }
-    },
+      },
 
       login: (email) => {
         let user = getStore().userAccounts.find((user) => user.email == email);
