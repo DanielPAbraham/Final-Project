@@ -29,7 +29,7 @@ export const MyJourney = (props) => {
               </Link>
             </h3>
           </div>
-        ) : store.user.journey == "muscle mass" ? (
+        ) : store.user.journey == "Build Muscle" ? (
           <>
             <div className="text-center">
               <h3>{store.user.name}, your journey is: Building Muscle</h3>
@@ -59,14 +59,13 @@ export const MyJourney = (props) => {
                 <br></br>
                 <p className="text-center">
                   {" "}
-                  It is possible to gain muscle without a surplus or even with a
-                  calorie defecit, though it is substantially more difficult. If
+                  It is possible to gain muscle without a caloric surplus, though it is substantially more difficult. If
                   you burn more calories than you consume, your body will
                   prioritize conserving energy and will not support muscle
-                  growth. Because of this, we recommend a calorie surplus in
+                  growth. Because of this, we recommend a calorie surplus of at least 300 calories in
                   order to gain muscle efficiently. In addition, it is essential
                   to have a high protein intake. A good baseline to begin with
-                  would be 70% of your body weight (lbs) in grams, daily.
+                  would be 70-100% of your body weight (lbs) in grams, daily. Carbohydrates are important for providing the body with the energy needed to power through workouts, and will make up the majority of your caloric intake.
                   Healthy fats are also important, they may not directly help
                   you build muscle but they do help boost your immune system and
                   maintain healthy hormonal functions. This is essential for
@@ -101,10 +100,10 @@ export const MyJourney = (props) => {
                   <Bmi />
                 </div>
               </div>
-              <div className="border rounded my-3 py-3">
+              {/* <div className="border rounded my-3 py-3">
                 <h4>Exercise tracker</h4>
                 <ExerciseTracker />
-              </div>
+              </div> */}
               <div className="border rounded my-3 py-3">
                 <h4>Nutrient tracker</h4>
                 <NutrientTracker />
@@ -168,10 +167,10 @@ export const MyJourney = (props) => {
                   <Bmi />
                 </div>
               </div>
-              <div className="border rounded my-3 py-3">
+              {/* <div className="border rounded my-3 py-3">
                 <h4>Exercise tracker</h4>
                 <ExerciseTracker />
-              </div>
+              </div> */}
               <div className="border rounded my-3 py-3">
                 <h4>Nutrient tracker</h4>
                 <NutrientTracker />

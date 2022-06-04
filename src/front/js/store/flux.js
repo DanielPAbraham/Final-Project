@@ -15,13 +15,13 @@ const getState = ({ getStore, getActions, setStore }) => {
       user: null,
       journeys: [
         { type: "Build Muscle", nutrition: "", exercises: "", programs: "" },
-        { type: "weight loss", nutrition: "", exercises: "", programs: "" },
+        { type: "Lose Weight", nutrition: "", exercises: "", programs: "" },
       ],
       userAccounts: [
         {
           name: "John",
           email: "john@gmail.com",
-          journey: "weight loss",
+          journey: "Lose Weight",
         },
         {
           name: "Tom",
