@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
+      workouts: [],
       recipes: [],
       mealData: [],
       vegetarian: [],
@@ -50,16 +51,20 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
       },
 
-      loadRecipe: async (id) => {
-        const response = await fetch(
-          process.env.BACKEND_URL + `/api/guest/${id}`
-        );
-        if (response.status === 200) {
-          const payload = await response.json();
-          setStore({ recipes: payload });
-          return payload;
+
+      loadWorkoutTable: async () => {
+        try {
+          const response = await fetch(`${process.env.BACKEND_URL}/api/workout`);
+          if (response.ok) {
+            const data = await response.json();
+            localStorage.setItem("data", JSON.stringify(data));
+            console.log("The response is ok", response);
+            return true;
+          }
+        } catch (error) {
+          throw Error("something went wrong");
         }
-      },
+    },
 
       login: (email) => {
         let user = getStore().userAccounts.find((user) => user.email == email);

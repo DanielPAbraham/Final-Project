@@ -18,12 +18,12 @@ class User(db.Model):
             # do not serialize the password, its a security breach
         }
 
-class WorkoutA(db.Model):
+class WorkoutTable(db.Model):
     id = db.Column(db.Integer, primary_key=True) #always have this
-    squat = db.Column(db.String(120), unique=True, nullable=False)
-    bench = db.Column(db.String(80), unique=False, nullable=False)
-    chinup = db.Column(db.String(80), unique=False, nullable=False)
-    
+    exercise = db.Column(db.String(120), unique=True, nullable=False)
+    sets = db.Column(db.String(80), unique=False, nullable=False)
+    reps = db.Column(db.String(80), unique=False, nullable=False)
+    weight_used = db.Column(db.String(80), unique=False, nullable=False)
     # is_active = db.Column(db.Boolean(), unique=False, nullable=False)
 
     # def __repr__(self):
@@ -32,9 +32,10 @@ class WorkoutA(db.Model):
     def serialize(self):
         return {
             "id": self.id,
-            "squat": self.squat,
-            "bench": self.bench,
-            "chinup": self.chinup,
+            "exercise": self.exercise,
+            "sets": self.sets,
+            "reps": self.reps,
+            "weight_used": self.weight_used,
             # do not serialize the password, its a security breach
         }
 
