@@ -46,7 +46,8 @@ export const Nutrition = (props) => {
             placeholder="Calories (e.g. 2000)"
             onChange={handleChange}
           ></input>
-          <div className="dropdown col-3">
+          <br></br>
+          <div className="dropdown col-3 cent">
             <button
               className="btn btn-secondary dropdown-toggle"
               type="button"
@@ -121,11 +122,12 @@ export const Nutrition = (props) => {
           </div>
         </section>
       </form>
-      <div>
+      <br></br>
+      <div className=" ">
         <div class="container">
           <div class="row">
             <button
-              className="btn btn-lg btn-outline-info  mx-2 btn-info col-4 tc1 position-absolute top-50 start-50 translate-middle"
+              className="btn btn-lg btn-outline-info  mx-2 btn-info col-4 tc1 position-relative top-50 start-50 translate-middle"
               onClick={getMealData}
             >
               Get Daily Meal Plan

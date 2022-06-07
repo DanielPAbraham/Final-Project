@@ -15,6 +15,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.cardwidth {
+  width: 30rem !important;
+}
 
 .fullscreen {
   position: absolute;
@@ -24,9 +27,14 @@
   left: 0px;
 }
 
-/* .bg2 {
-  background-color: #25274d;
-} */
+.cent {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.bg3 {
+  background-color: white;
+}
 
 .navcolor {
   background-color: #2f315f;
