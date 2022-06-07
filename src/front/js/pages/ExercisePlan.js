@@ -13,13 +13,14 @@ export const ExercisePlan = (props) => {
 
     return (
         <>
-        <Usernav />
-        <WorkoutTable />
-        <ExerciseTracker />
+            <Usernav />
+            <WorkoutTable />
+            <br></br>
+            <ExerciseTracker />
         </>
 
 
-)
+    )
 
 
 

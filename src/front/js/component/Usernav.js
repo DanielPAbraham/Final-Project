@@ -56,7 +56,7 @@ export const Usernav = () => {
             </li>
           </ul>
         </div>
-        <Link to="/">
+        <Link to="/Myjourney">
           <span className="navbar-brand mb-0 h1 justify-content-center fs-3">
             Zenith Fitness
           </span>

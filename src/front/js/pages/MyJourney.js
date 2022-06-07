@@ -238,21 +238,21 @@ const Modal = (props) => {
             id="age"
             className="fadeIn second"
             name="age"
-            placeholder="age"
+            placeholder="Age"
             value={journey.age}
             onChange={(e) => setJourney({ ...journey, age: e.target.value })}
           />
           <select className="fadeIn second">
-            <option value="-1">select gender</option>
-            <option value="1">male</option>
-            <option value="2">female</option>
+            <option value="-1">Select Gender</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
           </select>
           <input
             type="text"
             id="weight"
             className="fadeIn third"
             name="weight"
-            placeholder="weight"
+            placeholder="Weight"
             value={journey.weight}
             onChange={(e) => setJourney({ ...journey, weight: e.target.value })}
           />
@@ -261,14 +261,14 @@ const Modal = (props) => {
             id="height"
             className="fadeIn third"
             name="height"
-            placeholder="height"
+            placeholder="Height"
             value={journey.height}
             onChange={(e) => setJourney({ ...journey, height: e.target.value })}
           />
           <select className="fadeIn second">
-            <option value="-1">select path</option>
-            <option value="1">lose weight/fat</option>
-            <option value="2">increase muscle mass</option>
+            <option value="-1">Select Path</option>
+            <option value="1">Lose Weight/Fat</option>
+            <option value="2">Build Muscle</option>
           </select>
           <input
             type="button"

@@ -55,7 +55,7 @@ export const ExerciseTracker = (props) => {
           onChange={(e) =>
             setEntry({ ...entry, [e.target.name]: e.target.value })
           }
-          placeholder="Muscle group"
+          placeholder="Exercise"
         />
         <input
           type="text"
@@ -100,10 +100,10 @@ export const ExerciseTracker = (props) => {
         <thead className="">
           <tr>
             <th scope="col">Date</th>
-            <th scope="col">Muscle group</th>
+            <th scope="col">Exercise</th>
             <th scope="col">Total weight</th>
-            <th scope="col"># of sets</th>
-            <th scope="col"># of reps</th>
+            <th scope="col"># of Sets</th>
+            <th scope="col"># of Reps</th>
             <th scope="col">Progress</th>
           </tr>
         </thead>

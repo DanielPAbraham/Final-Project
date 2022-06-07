@@ -124,8 +124,8 @@ export const Nutrition = (props) => {
       </form>
       <br></br>
       <div className=" ">
-        <div class="container">
-          <div class="row">
+        <div className="container">
+          <div className="row">
             <button
               className="btn btn-lg btn-outline-info  mx-2 btn-info col-4 tc1 position-relative top-50 start-50 translate-middle"
               onClick={getMealData}
