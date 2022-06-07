@@ -10,13 +10,13 @@ export const Usernav = () => {
       <div className="container">
         <div className="dropdown col-3">
           <button
-            className="btn btn-secondary dropdown-toggle"
+            className="btn btn-primary dropdown-toggle"
             type="button"
             id="dropdownMenu2"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Nav
+            Menu
           </button>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
           <li>
