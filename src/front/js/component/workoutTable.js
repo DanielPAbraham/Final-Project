@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import "../../styles/workoutTable.css";
 import { Context } from "../store/appContext";
 
 export const WorkoutTable = () => {
