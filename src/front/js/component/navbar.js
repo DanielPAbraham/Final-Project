@@ -21,14 +21,7 @@ export const Navbar = () => {
             </Link>
           </div>
         ) : (
-          <div className="col-3 ml-auto">
-            <Link to="/login">
-              <button className="btn btn-primary mx-2">Login</button>
-            </Link>
-            <Link to="/register">
-              <button className="btn btn-primary mx-2">Register</button>
-            </Link>
-          </div>
+          <div className="col-3 ml-auto"></div>
         )}
       </div>
     </nav>

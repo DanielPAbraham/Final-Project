@@ -26,13 +26,13 @@ export const Home = () => {
           ) : (
             <div className="position-absolute top-50 start-50 translate-middle card w-25 bg-transparent">
               <Link to="/login">
-                <button className="btn btn-primary mx-2 btn-info w-100 h-50">
+                <button className="btn btn-lg btn-outline-info mx-2 btn-info w-100 h-50 tc1">
                   Login
                 </button>
               </Link>
               <br></br>
               <Link to="/register">
-                <button className="btn btn-primary mx-2 btn-info w-100 h-50">
+                <button className="btn btn-lg btn-outline-info  mx-2 btn-info w-100 h-50 tc1">
                   Register
                 </button>
               </Link>
