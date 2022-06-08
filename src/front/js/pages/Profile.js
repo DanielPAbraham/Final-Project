@@ -52,7 +52,8 @@ export const Profile = (props) => {
                             type="text"
                             className="form-control"
                             id="fullName"
-                            placeholder="Enter full name"
+                            placeholder="Tom Clancy
+                            "
                           />
                         </div>
                         <div className="col">
@@ -74,24 +75,24 @@ export const Profile = (props) => {
                     <div class="col-4">
                       <div className="">
                         <div className="form-group">
-                          <label for="fullName">Current Weight</label>
+                          <label for="fullName">Current Weight in Lbs</label>
                           <input
                             type="text"
                             className="form-control"
                             id="fullName"
-                            placeholder="Enter Weight"
+                            placeholder="220"
                           />
                         </div>
                       </div>
                       <br></br>
                       <div className="">
                         <div className="form-group">
-                          <label for="fullName">Current Height</label>
+                          <label for="fullName">Current Height in Inches</label>
                           <input
                             type="text"
                             className="form-control"
                             id="fullName"
-                            placeholder="Current Height"
+                            placeholder="77"
                           />
                         </div>
                       </div>
