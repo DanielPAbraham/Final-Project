@@ -7,6 +7,7 @@ import { Bmi } from "../component/BmiCalculator";
 import { NutrientTracker } from "../component/NutrientTracker";
 import { ExerciseTracker } from "../component/ExerciseTracker";
 import { WorkoutTable } from "../component/workoutTable";
+import { Cal } from "../component/CalorieCalculator";
 
 export const MyJourney = (props) => {
   const { store, actions } = useContext(Context);
@@ -97,13 +98,19 @@ export const MyJourney = (props) => {
                       you work out with. Another commonly neglected but very
                       important practice, is giving your muscles time to rest.
                       Without rest, you sharply increase your chance of injury
-                      and prevent muscle growth.{" "}
+                      and promote muscle growth.{" "}
                     </p>
                   </div>
                   <div className="border rounded my-3 py-3">
                     <h4>BMI calculator</h4>
                     <div>
                       <Bmi />
+                    </div>
+                  </div>
+                  <div className="border rounded my-3 py-3">
+                    <h4>Calorie Calculator</h4>
+                    <div>
+                      <Cal />
                     </div>
                   </div>
                   {/* <div className="border rounded my-3 py-3">
