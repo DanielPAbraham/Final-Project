@@ -25,7 +25,7 @@ export const About = (props) => {
             <br></br>
             <div className="container">
               <div className="row gx-5">
-                <div className="col-12 border border-danger bg-light">
+                <div className="col-11 border border-danger bg-light">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   et suscipit libero, vitae pretium dolor. Fusce a porttitor
                   ligula. Phasellus rutrum ex a ex fringilla ornare.

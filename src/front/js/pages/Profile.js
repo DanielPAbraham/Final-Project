@@ -125,7 +125,7 @@ export const Profile = (props) => {
                         id="w3review"
                         name="w3review"
                         rows="7"
-                        cols="76"
+                        cols="70"
                       >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Nam tincidunt mi sed placerat dignissim. Donec rhoncus
