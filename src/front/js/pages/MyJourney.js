@@ -77,7 +77,7 @@ export const MyJourney = (props) => {
                     <br></br>
                     <p className="text-center">
                       To build muscle optimally, it's best to utilize compound movements that target
-                      several muscles at once. Your Workout PLan is designed with key lifts to help you space out your workouts
+                      several muscles at once. Your Workout Plan is designed with key lifts to help you space out your workouts
                       for optimal recovery and for targeting all muscle groups throughout the week. The Muscle Building
                       Program provided to you by Zenith Fitness consists of a 3 day split, which can be completed with a
                       Monday, Wendesday, Friday schedule. By Working out just 3 Days a week, you will be able to maximize your
