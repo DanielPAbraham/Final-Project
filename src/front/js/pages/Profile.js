@@ -128,16 +128,7 @@ export const Profile = (props) => {
                         rows="7"
                         cols="70"
                       >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nam tincidunt mi sed placerat dignissim. Donec rhoncus
-                        sapien sit amet ultrices commodo. Curabitur quis justo
-                        non metus pretium consequat eu nec nisi. Nulla in
-                        commodo ligula. Sed consequat bibendum tortor et mollis.
-                        Nullam sollicitudin risus in quam tempus suscipit.
-                        Phasellus eget facilisis leo. Phasellus eget eros
-                        aliquam, porttitor quam in, mattis lectus. Quisque eu
-                        erat fermentum elit rutrum convallis quis quis lectus.
-                        Donec finibus est ut congue bibendum.
+                        Just an absolute physical specimen trying to put on some muscle. I find that this website helps me reach my goals and keeps me on track!
                       </textarea>
                     </div>
                   </div>

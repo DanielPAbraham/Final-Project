@@ -60,18 +60,12 @@ export const MyJourney = (props) => {
                     <br></br>
                     <p className="text-center">
                       {" "}
-                      It is possible to gain muscle without a caloric surplus,
-                      though it is substantially more difficult. If you burn
-                      more calories than you consume, your body will prioritize
-                      conserving energy and will not support muscle growth.
-                      Because of this, we recommend a calorie surplus of at
-                      least 300 calories in order to gain muscle efficiently. In
-                      addition, it is essential to have a high protein intake. A
-                      good baseline to begin with would be 70-100% of your body
-                      weight (lbs) in grams, daily. Carbohydrates are important
-                      for providing the body with the energy needed to power
-                      through workouts, and will make up the majority of your
-                      caloric intake. Healthy fats are also important, they may
+                      Nutrition is very important for optimal muscle recovery and growth. In order to ensure you are receiving enough calories to
+                      promote muscle growth, we suggest eating just 300 calories over your maintainence (a Calorie Calculator is provided below).
+                      keeping track of macro-nutrients is important to make sure your body is getting the essential nutrients necessary for
+                      maintaining a healthy immune system, mind, and muscle growth. Your target protein count should be 0.7-1 gram of protein
+                      per lb of bodyweight. This ensures you are able to recover from your workouts and promote muscle growth. Carbohydrates
+                      provide energy and will make up the majority of your caloric needs. Healthy fats are also important, they may
                       not directly help you build muscle but they do help boost
                       your immune system and maintain healthy hormonal
                       functions. This is essential for muscle growth and general
@@ -82,23 +76,16 @@ export const MyJourney = (props) => {
                     <h3>Exercise Program</h3>
                     <br></br>
                     <p className="text-center">
-                      To build muscle efficiently, it is better to work out
-                      multiple muscles at once. While bicept curls and the like
-                      should have their place in your routine, they should not
-                      be it's backbone. Exercises that work out multiple muscle
-                      groups are not only a more efficient use of your time,
-                      they also allow you to lift more weight at a time which is
-                      essential to building muscle. A great example would be the
-                      bench press (there's a reason why it's a staple in many
-                      athlete's regimes), the bench press helps strengthen most
-                      of your upper body at once, including the tricept, bicept,
-                      and pectorals. A common issue that arises when trying to
-                      build muscle is stagnation. To avoid plateauing it is
-                      imperitive that you progressively increase the weight that
-                      you work out with. Another commonly neglected but very
-                      important practice, is giving your muscles time to rest.
-                      Without rest, you sharply increase your chance of injury
-                      and promote muscle growth.{" "}
+                      To build muscle optimally, it's best to utilize compound movements that target
+                      several muscles at once. Your Workout PLan is designed with key lifts to help you space out your workouts
+                      for optimal recovery and for targeting all muscle groups throughout the week. The Muscle Building
+                      Program provided to you by Zenith Fitness consists of a 3 day split, which can be completed with a
+                      Monday, Wendesday, Friday schedule. By Working out just 3 Days a week, you will be able to maximize your
+                      strength gains and allow the body to recover and build muscle on your rest days. The key to buidling more
+                      muscle is to practice progressive overload, this is when you progressively become more stronger and add a rep or more weight
+                      to exercises you preform. We recommend adding 5lb to your working weight once you are able to complete all the sets for the
+                      maximum reps required for an exercise.
+                      {" "}
                     </p>
                   </div>
                   <div className="border rounded my-3 py-3">
