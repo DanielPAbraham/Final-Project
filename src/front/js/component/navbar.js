@@ -17,7 +17,7 @@ export const Navbar = () => {
         {store.user ? (
           <div className="ml-auto">
             <Link to="/demo">
-              <button className="btn btn-primary">Dashboard</button>
+              <button className="btn btn-info">Dashboard</button>
             </Link>
           </div>
         ) : (

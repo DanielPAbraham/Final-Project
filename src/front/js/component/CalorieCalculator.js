@@ -21,12 +21,6 @@ export const Cal = () => {
 
     return (
         <div>
-            {/* <input
-                type="text"
-                className="w-25"
-                onChange={(e) => setHeight(e.target.value)}
-                placeholder="Your height in inches"
-            /> */}
             <input
                 type="text"
                 className="w-25"

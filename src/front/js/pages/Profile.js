@@ -104,7 +104,7 @@ export const Profile = (props) => {
                               type="button"
                               id="submit"
                               name="submit"
-                              className="btn btn-secondary "
+                              className="btn btn-md btn-secondary"
                             >
                               Cancel
                             </button>
@@ -112,7 +112,7 @@ export const Profile = (props) => {
                               type="button"
                               id="submit"
                               name="submit"
-                              className="btn btn-primary "
+                              className="btn btn-md btn-outline-info"
                             >
                               Update
                             </button>

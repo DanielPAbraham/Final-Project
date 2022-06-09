@@ -10,7 +10,7 @@ export const Usernav = () => {
       <div className="container">
         <div className="dropdown col-3">
           <button
-            className="btn btn-primary dropdown-toggle"
+            className="btn btn-md btn-outline-info dropdown-toggle"
             type="button"
             id="dropdownMenu2"
             data-bs-toggle="dropdown"

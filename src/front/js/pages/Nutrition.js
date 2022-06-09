@@ -43,9 +43,10 @@ export const Nutrition = (props) => {
         <section className="controls">
           <input
             type="number"
+            className=""
             placeholder="Calories (e.g. 2000)"
             onChange={handleChange}
-          ></input>
+          />
           <br></br>
           <div className="dropdown col-3 cent">
             <button
