@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Usernav } from "../component/Usernav";
+import logoImageurl from "../../img/logo.jpg";
+import Rene from "../../img/Rene.jpg";
+import Daniel from "../../img/Daniel.jpg";
 
 export const About = (props) => {
   const { store, actions } = useContext(Context);
@@ -11,52 +14,87 @@ export const About = (props) => {
   return (
     <>
       <Usernav />
-      <div className="bg2 fullscreen h-100 text-center mt-5 end-0">
-        <div className="bg-transparent card">
-          <div className="bg2">
+      <div className="text-center">
+        <div className="">
+          <div className="">
+            <br></br>
             <br></br>
             <div className="container">
               <div className="row gx-5 fs-2">
-                <div className="col-2 border border-danger bg-light">
+                <div className="col"></div>
+                <div className="col-2 border position-relative bg-light title">
                   About Us
                 </div>
+                <div className="col"></div>
+              </div>
+            </div>
+            <br></br>
+            <br></br>
+            <div className="container">
+              <div className="row gx-5">
+                <div className="col"></div>
+                <div className="col-11 border  bg-light">
+                  Zenith Fitness was developed by a pair of lifelong friends
+                  named Daniel Abraham Perez and Rene Gonzalo Infante. We
+                  created this site to help people live healthier, longer, and
+                  happier lives. Both of us have experience with body
+                  transformations and general fitness. Daniel has worked out
+                  consistently for many years in order to gain muscle while Rene
+                  has experience with weight loss. We hope to help guide people
+                  on their health journey, wherever that takes them.
+                </div>
+                <div className="col"></div>
               </div>
             </div>
             <br></br>
             <div className="container">
-              <div className="row gx-5">
-                <div className="col-11 border border-danger bg-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  et suscipit libero, vitae pretium dolor. Fusce a porttitor
-                  ligula. Phasellus rutrum ex a ex fringilla ornare.
-                  Pellentesque habitant morbi tristique senectus et netus et
-                  malesuada fames ac turpis egestas. Nam viverra sem et molestie
-                  suscipit. Fusce elementum diam sit amet facilisis congue.
-                  Morbi non orci sed tortor imperdiet iaculis et nec purus.
-                  Fusce vehicula nunc non odio tincidunt, et lacinia arcu
-                  vehicula. Suspendisse tincidunt lobortis fermentum. Etiam
-                  ipsum leo, consectetur at massa at, dignissim condimentum dui.
-                  Morbi aliquet elementum leo, et auctor enim fermentum non.
-                  Praesent faucibus nunc vitae odio facilisis imperdiet. Ut vel
-                  rhoncus erat. Phasellus bibendum orci eget dolor lacinia, nec
-                  pharetra elit tempus. Phasellus tempor eu urna a sollicitudin.
-                  Suspendisse in sagittis sem.
+              <div className="row">
+                <div className="col">
+                  <div class="card cardwidth">
+                    <img
+                      src={Rene}
+                      class="card-img-top imgsize2"
+                      alt="..."
+                    ></img>
+                    <div class="card-body">
+                      <h4 class="card-text">Rene Gonzalo Infante</h4>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <br></br>
-              <div className="col-12 border border-danger bg-light">
-                <p>What we stand for</p>
-                <ul>
-                  <li>Curabitur aliquam sapien vitae bibendum gravida.</li>
-                  <li>Mauris mollis sapien id risus euismod congue.</li>
-                  <li>
-                    Cras in arcu id risus consequat sodales rhoncus et enim.
-                  </li>
-                  <li>Pellentesque feugiat diam vel nisi porta lacinia.</li>
-                  <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </li>
-                </ul>
+                <div className="col">
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <img src={logoImageurl} className=" "></img>
+                </div>
+                <div className="col">
+                  <div class="card cardwidth">
+                    <img
+                      src={Daniel}
+                      class="card-img-top imgsize2"
+                      alt="..."
+                    ></img>
+                    <div class="card-body">
+                      <h4 class="card-text">Daniel Abraham Perez</h4>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
